@@ -1,0 +1,18 @@
+tables:
+  - name: table
+    type: view
+    columns:
+      - name: user
+        type: string
+  - name: table2
+#    type: view
+    columns:
+      - name: user2
+        type: string
+        mode: "REPEATED"
+        policyTags:
+          names:
+            - "PII"
+        fields:
+          - name: user_id
+            type: string
